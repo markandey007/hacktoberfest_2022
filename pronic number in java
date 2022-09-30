@@ -1,0 +1,29 @@
+import java.util.*;
+public class pronc
+{
+public static void main(String args[])
+{
+    
+    Scanner sc=new Scanner(System.in);
+    String a=sc.next();
+    int n=a.length();
+    for(int i=0;i<n;i++)
+    {
+        String b="";
+        for(int j=i;j<n;j++)
+        {
+            b=b+a.charAt(j);
+            int s=Integer.parseInt(b);
+            int m=(int)(Math.floor(Math.sqrt(s)));
+            int p=(int)(Math.floor(Math.sqrt(s))+1);
+            if((m*p)==s && s!=0)
+            System.out.println(s);
+            
+            
+            
+        }
+     
+    }
+    
+}
+}
