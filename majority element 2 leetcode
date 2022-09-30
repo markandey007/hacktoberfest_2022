@@ -1,0 +1,39 @@
+class Solution {
+    public List<Integer> majorityElement(int[] nums) {
+        List<Integer> a = new ArrayList<>();
+        HashMap<Integer,Integer> map=new HashMap<>();
+        for(int i=0;i<nums.length;i++)
+        {
+            if(map.containsKey(nums[i]))
+               {
+                   map.put(nums[i],map.get(nums[i])+1);
+               }
+               else
+               {
+                   map.put(nums[i],1);
+               }
+               
+        }
+               int w=(int)(nums.length/3);
+              /* Collections<Integer> values=map.values();
+               for(int i:values)
+               {
+                   if(i>w)
+                   {
+                       list.add(map.get(i));
+                   }
+                   else
+                       continue;
+               }*/
+               for(int key:map.keySet())
+               {
+                   Integer val=map.get(key);
+                   if(val>w)
+                       a.add(key);
+               }
+               return a;
+               
+        
+        
+    }
+}
