@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+	int n;
+	cin>>n;
+	vector<pair<int,int>> v;
+	for(int i=0;i<n;i++){
+		int a,b;
+		cin>>a>>b;
+		v.push_back({a,b});
+	}
+
+	int initial = v[0].first;
+	int x=1;
+	int x1=v[1].first;
+	while(x<n){
+		int mul=0;
+		while(x1<=initial){
+			x1=v[x].first+mul*v[x].second;
+			mul++;
+		}
+		initial = x1;
+		x++;
+	}
+	cout<<initial;
+	return 0;
+}
