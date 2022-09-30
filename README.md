@@ -2,7 +2,7 @@
 
 <br>
 <p align="center">
-  <img src="_images/Logo.JPG">
+  <https://www.google.com/url?sa=i&url=https%3A%2F%2Fdev.to%2Fgithub%2Fhow-to-get-ready-for-hacktoberfest-2022-2ck2&psig=AOvVaw3ezI7pi39kHIEfe-GkedLX&ust=1664646042501000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCPCIsPOHvfoCFQAAAAAdAAAAABAD>
 </p>
 
 ## This repository aims to help code beginners with their first successful pull request and open source contribution. :partying_face:
