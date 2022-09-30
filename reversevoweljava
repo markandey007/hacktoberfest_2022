@@ -1,0 +1,47 @@
+import java.util.*;
+public class vowelrev
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        String s=sc.nextLine();
+        int i=0;
+        
+        char ch[]=s.toCharArray();
+        
+        int j=ch.length-1;
+        while(i<j)
+        {
+           
+            if((ch[i]=='a' || ch[i]=='e' || ch[i]=='i' || ch[i]=='o' || ch[i]=='u') && (ch[j]=='a' || ch[j]=='e' || ch[j]=='i' || ch[j]=='o' || ch[j]=='u'))
+            {
+                char ch2=ch[i];
+                ch[i]=ch[j];
+                ch[j]=ch2;
+                i++;
+                j--;
+                
+            }
+            else if((ch[i]=='a' || ch[i]=='e' || ch[i]=='i' || ch[i]=='o' || ch[i]=='u') && (ch[j]!='a' || ch[j]!='e' || ch[j]!='i' || ch[j]!='o' || ch[j]!='u'))
+            {
+                j--;
+        }   
+        else if((ch[i]!='a' || ch[i]!='e' || ch[i]!='i' || ch[i]!='o' || ch[i]!='u') && (ch[j]=='a' || ch[j]=='e' || ch[j]=='i' || ch[j]=='o' || ch[j]=='u'))
+        {
+            i++;
+        }
+        else 
+        {
+            i++;
+            j--;
+        }
+        
+    }
+   String s3="";
+for(int m=0;m<ch.length;m++)
+        {
+            s3=s3+ch[m];
+        }    
+        System.out.println(s3);
+}
+}
