@@ -1,0 +1,43 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+	long long int n,k;
+	cin>>n>>k;
+	queue<int> q;
+	int max1=INT_MAX;
+	for(int i=0;i<n;i++){
+		int a;
+		cin>>a;
+		max1=max(max1,a);
+		q.push(a);
+	}
+	if(k>=n){
+		cout<<n;
+		return 0;
+	}
+	long long int sum=0;
+	int x,y;
+	x=q.front();
+	q.pop();
+	int z;
+	while(sum!=k){
+		z++;
+		y= q.front();
+		if(x>y){
+			sum++;
+			q.pop();
+			q.push(y);
+		}
+		else{
+			sum=0;
+			q.push(x);
+			x=q.front();
+			q.pop();
+
+		}
+	}
+	cout<<x;
+
+		return 0;
+}
