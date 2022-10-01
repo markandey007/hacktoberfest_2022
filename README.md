@@ -7,18 +7,18 @@
 
 ## This repository aims to help code beginners with their first successful pull request and open source contribution. :partying_face:
 
-:star: Feel free to use this project to make your first contribution to an open-source project on GitHub. Practice making your first pull request to a public repository before doing the real thing!
+:star: You are welcome to use this project as a starting point for your first contribution to a GitHub open-source project. Practice making your first pull request to a public repository before doing the real thing!
 
-:star: Make sure to grab some cool swags during Hacktoberfest by getting involved in the open-source community.
+:star: Participating in the open-source community will ensure that you receive some awesome stuff during Hacktoberfest.
 
 ### This repository is open to all members of the GitHub community. Any member can contribute to this project!
 # Guidelines
 
     1. Contribute a basic program using any programming language.
-    2. The Program should be executable, with 0 errors and proper documentation.
+    2. The programme need to be executable, error-free, and well documented.
     3. Create a directory for the programming language you are using.
     4. Note: Do not create a new directory if already exists.
-    5. Writing the author's name and the date modified is a must (Write it as a multiline comment in your code).
+    5. You must include the name of the author and the modification date (Write it as a multiline comment in your code).
     6. Filename should be meaningful.
     7. Don't spam it will be rejected immediately.
 
