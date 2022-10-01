@@ -1,0 +1,20 @@
+def solve(a,b,c):
+    A= a
+    x= 0
+    while True:
+        x = a-(b-x)
+        if x==A:
+            return "NO"
+        if x==c:
+            return "YES"
+        while(x>b):
+            x = x-b
+            if x==c:
+                return "YES"
+
+for i in range(int(input())):
+    a, b , c= map(int, input("").split())
+    x = [a,b]
+    x.sort()
+    b,a = x
+    print(solve(a,b,c))
