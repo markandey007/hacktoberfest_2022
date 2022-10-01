@@ -1,0 +1,7 @@
+Author: Ram Santhosh Patnaik Belagam
+Github Username: Ram5anthosh
+
+About the Project:
+This is a simple terminal based Tic-Tac-Toe. 
+
+
