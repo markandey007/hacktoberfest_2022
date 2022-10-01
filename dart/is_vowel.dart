@@ -1,4 +1,13 @@
-/// Checks if [char] is a Vowel.
+/**
+ * Author: Rizky Pratama Syahrul Ramadhan
+ * Date Modified Saturday, 1 October 2022
+ */
+
+void main() {
+  print(isVowel('a'));
+}
+
+// Checks if [char] is a Vowel.
 bool isVowel(String char) {
   return char == 'a' ||
       char == 'e' ||
