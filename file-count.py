@@ -1,3 +1,7 @@
+'''
+    Install matplotlib with: pip3 install matplotlib
+'''
+
 import os
 
 # Import libraries
