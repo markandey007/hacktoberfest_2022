@@ -84,6 +84,3 @@ int main()
 	cout << "Index of " << key
 		<< " is " << p << endl;
 }
-
-// This code is contributed
-// by Akanksha_Rai
