@@ -64,8 +64,6 @@ git push -u origin <your_branch_name>
 9. Congratulations! 🎉 you've made your contribution.
 
 
----
-
 ### This repository is open to all members of the GitHub community. Any member can contribute to this project! :grin:
 
 ## What is Hacktoberfest? :thinking:
