@@ -1,4 +1,4 @@
-# Hacktoberfest-2022🔥
+# Hacktoberfest2022🔥
 
 Feel free to submit issues and enhancement requests.
 
