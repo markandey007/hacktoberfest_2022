@@ -4,7 +4,7 @@ Feel free to submit issues and enhancement pull requests.
 
 ## Contributing
 
-Please refer to each project's style and contribution guidelines for submitting patches and additions. In general, we follow the "fork-and-pull" Git workflow.
+Please refer to each project's style and contribution guidelines for submitting patches and additions. In general, we follow the "Fork-and-Pull" Git Workflow.
 
 1.  **Fork** the repo on GitHub
 2.  **Clone** the project to your own machine/account 
