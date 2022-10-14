@@ -1,61 +1,89 @@
-// { Driver Code Starts
-#include <bits/stdc++.h>
+#include <iostream>
+#include <map>
+#include<list>
+#include<queue>
 using namespace std;
 
- // } Driver Code Ends
-class Solution {
-  public:
-    // Function to return Breadth First Traversal of given graph.
-    vector<int> bfsOfGraph(int V, vector<int> adj[]) {
-        vector<int> bfs;
-       vector<int> vis(V,0);
-       
-       queue<int> q;
-       q.push(0);
-       vis[0] = 1;
-       
-       while(q.size()!=0){
-        int top = q.front();
-        for(auto itr : adj[top]){
-          if(vis[itr]== 0){
-           q.push(itr);
-           vis[itr] = 1;
-          }
+template <typename T>
+class Graph {
+    public:
+        map<T, list<T> > adjList;
+
+    void addEdge(T u, T v, bool direction) {
+        //direction = 0 -> undirected graph
+        //direction = 1 -> directed grapp
+
+        //for u->v
+        adjList[u].push_back(v);
+        //check v->u
+        if(direction == 0) {
+            adjList[v].push_back(u);
+        }    
+    }
+
+    void printAdj() {
+        
+        for(auto i: adjList) {
+            cout << i.first << " -> " ;
+            for(auto j: i.second) {
+                cout << j << ", "; 
+            }    
+            cout << endl;
         }
-        bfs.push_back(top);
-        q.pop();
-       }
-       
-       return bfs;
-   }
+    }
+    void bfs(int src,map<int, bool>& visited) {
+
+        queue<int> q;
+        q.push(src);
+        
+        
+        visited[src] = true;
+
+        while(!q.empty()) {
+            int front = q.front();
+            cout << front << ", ";
+            q.pop();
+
+            for(auto neighbour: adjList[front]) {
+                if(!visited[neighbour] ) {
+                    q.push(neighbour);
+                    visited[neighbour] = true;
+                }
+            }
+        }
+        
+    }
 };
 
-// { Driver Code Starts.
+
+
 int main() {
-    int tc;
-    cin >> tc;
-    while (tc--) {
-        int V, E;
-        cin >> V >>
 
-            E;
+    Graph<int> g;
 
-        vector<int> adj[V];
 
-        for (int i = 0; i < E; i++) {
-            int u, v;
-            cin >> u >> v;
-            adj[u].push_back(v);
-            // 		adj[v].push_back(u);
+    g.addEdge(0, 1, 0);     //from 0 to 1 
+    g.addEdge(1, 2, 0);     //from 1 to 2
+    g.addEdge(1, 3, 0);     //from 1 to 3
+    g.addEdge(2, 3, 0);     //from 2 to 3
+    g.addEdge(3, 4, 0);     //from 3 to 4
+    g.addEdge(2, 4, 0);     //from 2 to 4
+
+    cout << "Printing the Adjacency List " << endl;
+    g.printAdj();
+
+    cout << "printing the bfs traversal  " << endl;
+
+    int n = 5;
+    map<int, bool> visited;
+    //to handle graph with disconnected components
+    for(int i=0; i<n; i++) {
+        if(!visited[i]) {
+            g.bfs(i, visited);
         }
-        // string s1;
-        // cin>>s1;
-        Solution obj;
-        vector<int> ans = obj.bfsOfGraph(V, adj);
-        for (int i = 0; i < ans.size(); i++) {
-            cout << ans[i] << " ";
-        }
-        cout << endl;
     }
-    return 0;
-}  // } Driver Code Ends
+    
+    
+
+  return 0;
+} 
