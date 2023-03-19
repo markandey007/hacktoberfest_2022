@@ -3,45 +3,36 @@ public class vowelrev
 {
     public static void main(String args[])
     {
+    
+    
         Scanner sc=new Scanner(System.in);
         String s=sc.nextLine();
+         
+        char[] ch=s.toCharArray();
+        char chr;
         int i=0;
+        int j=s.length()-1;
         
-        char ch[]=s.toCharArray();
+        while(i<j){
         
-        int j=ch.length-1;
-        while(i<j)
-        {
-           
-            if((ch[i]=='a' || ch[i]=='e' || ch[i]=='i' || ch[i]=='o' || ch[i]=='u') && (ch[j]=='a' || ch[j]=='e' || ch[j]=='i' || ch[j]=='o' || ch[j]=='u'))
-            {
-                char ch2=ch[i];
+            if((ch[i]!='a' && ch[i]!='e' && ch[i]!='i' && ch[i]!='o' && ch[i]!='u')) {
+                i++;
+            }
+            else if((ch[j]!='a' && ch[j]!='e' && ch[j]!='i' && ch[j]!='o' && ch[j]!='u')){
+                j--;
+            }
+            else{
+                chr=ch[i];
                 ch[i]=ch[j];
-                ch[j]=ch2;
+                ch[j]=chr;
                 i++;
                 j--;
-                
             }
-            else if((ch[i]=='a' || ch[i]=='e' || ch[i]=='i' || ch[i]=='o' || ch[i]=='u') && (ch[j]!='a' || ch[j]!='e' || ch[j]!='i' || ch[j]!='o' || ch[j]!='u'))
-            {
-                j--;
-        }   
-        else if((ch[i]!='a' || ch[i]!='e' || ch[i]!='i' || ch[i]!='o' || ch[i]!='u') && (ch[j]=='a' || ch[j]=='e' || ch[j]=='i' || ch[j]=='o' || ch[j]=='u'))
-        {
-            i++;
-        }
-        else 
-        {
-            i++;
-            j--;
         }
         
-    }
-   String s3="";
-for(int m=0;m<ch.length;m++)
-        {
-            s3=s3+ch[m];
-        }    
-        System.out.println(s3);
+        String res=new String(ch); 
+        System.out.println(res);
+       
+        
 }
 }
